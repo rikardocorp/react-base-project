@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Switch, Redirect, Route, withRouter } from 'react-router-dom'
 
 import appRoutes from './routes/index'
-
+import './assets/css/body.css';
 class App extends Component {
 
     componentDidMount() {

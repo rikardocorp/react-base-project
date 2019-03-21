@@ -5,11 +5,17 @@ import { route } from './route'
 import { connect } from 'react-redux'
 import ReactNotification from 'react-notifications-component'
 
+import {route as myRoutes} from './route'
+import Header from '../../components/Layout/Header';
 class Pages extends Component {
 
     constructor(props) {
         super(props)
         this.notificationDOMRef = React.createRef();
+    }
+
+    state = {
+        routes: myRoutes.routes,
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -75,12 +81,12 @@ class Pages extends Component {
             <div>
                 <div className='wrapper wrapper-full-page'>
                     <ReactNotification ref={this.notificationDOMRef} />
-                    <div className="content d-flex align-items-center justify-content-center">
+                    <Header routes={allRoutes} />
+                    <section>
                         <Switch>
                             {contentSwitch}
                         </Switch>
-                    </div>
-
+                    </section>
                 </div>
             </div>
         );

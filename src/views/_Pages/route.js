@@ -1,9 +1,14 @@
 // Pages
-import Login from './LoginPage'
-import Pagina from './pagina2'
 import Main from "./Pages";
 
-const _base = {name: 'Authentication', path: '/auth'}
+import Home from './Home'
+import About from './About'
+import Skills from './Skills'
+import Project from './Project'
+import Contact from './Contact'
+
+
+export const _base = {name: 'Authentication', path: '/auth'}
 
 export const route = {
     path: _base.path,
@@ -11,24 +16,57 @@ export const route = {
     component: Main,
     routes: [
         {
-            path: _base.path +"/login",
-            component: Login,
+            path: _base.path +"/home",
+            component: Home,
             name: 'Login',
-            icon: "nc-icon nc-mobile",
+            rel: 'index',
+            icon: "icon-home",
+            className: 'link-home',
             visible: true,
-            meta: {requiredNoAuth:true},
-            className: 'animation-page login-page'
+            meta: {requiredNoAuth:true}
         },
         {
-            path: _base.path +"/alex",
-            component: Pagina,
-            name: 'Login',
-            icon: "nc-icon nc-mobile",
+            path: _base.path +"/about",
+            component: About,
+            name: 'About',
+            rel: 'about',
+            icon: "icon-prof",
+            className: 'link-page',
             visible: true,
-            meta: {requiredNoAuth:true},
-            className: 'animation-page login-page'
+            meta: {requiredNoAuth:true}
         },
-        {redirect: true, path: _base.path, to: _base.path + "/login"}
+        {
+            path: _base.path +"/skill",
+            component: Skills,
+            name: 'Skill',
+            rel: 'skill',
+            icon: "icon-gear",
+            className: 'link-page',
+            visible: true,
+            meta: {requiredNoAuth:true}
+        },
+        {
+            path: _base.path +"/project",
+            component: Project,
+            name: 'Project',
+            rel: 'project',
+            icon: "icon-eye",
+            className: 'link-page',
+            visible: true,
+            meta: {requiredNoAuth:true}
+        },
+        {
+            path: _base.path +"/contact",
+            component: Contact,
+            name: 'Contact',
+            rel: 'contact',
+            icon: "icon-mail",
+            className: 'link-page',
+            visible: true,
+            meta: {requiredNoAuth:true}
+        },
+
+        {redirect: true, path: _base.path, to: _base.path + "/home"}
     ]
 
 }
