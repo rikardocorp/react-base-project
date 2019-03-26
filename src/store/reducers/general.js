@@ -1,4 +1,5 @@
 import * as at from '../actions/actionTypes'
+import {data as myData} from '../../config/data'
 
 const initialState = {
     countLoading: 0,
@@ -16,6 +17,7 @@ const initialState = {
     },
     showing: false,
     isHide: false,
+    ...myData
 }
 
 const reducer = ( state = initialState, action ) => {

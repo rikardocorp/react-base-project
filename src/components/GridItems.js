@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class GridItems extends Component {
     render() {
         const projects = this.props.data ? this.props.data : []
@@ -9,9 +10,12 @@ class GridItems extends Component {
                 <ul className="ch-grid">
                 {
                     projects.map((pro, index) => {
+                        console.log(pro.image)
                         return (
                             <li key={index}>
-                                <div className="ch-item onlyimg ch-img-1">
+                                <div 
+                                    className="ch-item onlyimg" 
+                                    style={{backgroundImage: "url('" + pro.image + "')"}}>
                                     <div className="ch-info">
                                         <h3>{pro.title}</h3>
                                         <p>{pro.content}</p>

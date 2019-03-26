@@ -7,7 +7,7 @@ import ReactNotification from 'react-notifications-component'
 
 import {route as myRoutes} from './route'
 import Header from '../../components/Layout/Header';
-class Pages extends Component {
+class Vertical extends Component {
 
     constructor(props) {
         super(props)
@@ -15,29 +15,7 @@ class Pages extends Component {
     }
 
     state = {
-        routes: myRoutes.routes,
-        socials: [
-            {
-                icon: 'linkedin',
-                url: 'https'
-            },
-            {
-                icon: 'twitter',
-                url: 'https'
-            },
-            {
-                icon: 'github',
-                url: 'https'
-            },
-            {
-                icon: 'graduation-cap',
-                url: 'http:'
-            },
-            {
-                icon: 'medium',
-                url: 'http:'
-            }
-        ],
+        routes: myRoutes.routes
     }
 
     shouldComponentUpdate(nextProps, nextState) {
@@ -60,7 +38,7 @@ class Pages extends Component {
     render() {
 
         const allRoutes = route.routes
-        const _socials = this.state.socials
+        const _socials = this.props.socials
         let localClassName = ''
         let contentSwitch = null
         if (allRoutes) {
@@ -117,8 +95,9 @@ class Pages extends Component {
 const mapStateToProps = state => {
     return {
         notify: state.general.notify,
-        isAuth: state.general.user.auth
+        isAuth: state.general.user.auth,
+        socials: state.general.about_me.socials
     }
 }
 
-export default connect(mapStateToProps)(Pages);
+export default connect(mapStateToProps)(Vertical);

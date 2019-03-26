@@ -6,7 +6,7 @@ import { Redirect, Switch, Route } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 import {_base} from './route'
-
+import imgProject from '../../assets/img/project1.png'
 
 const GridData = ({data}) => {
     return (   
@@ -22,19 +22,22 @@ class Project extends Component {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             }
         ],
         projects2: [
@@ -42,31 +45,36 @@ class Project extends Component {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject
             },
             {
                 title: 'Trello',
                 content: 'Plataforma para gestión de proyectos con react.js y sass.',
                 github: 'https://github.com/AydeeQM/Trello-firebase',
-                website: 'https://trello-fire.firebaseapp.com/'
+                website: 'https://trello-fire.firebaseapp.com/',
+                image: imgProject                
             }
         ]
     }

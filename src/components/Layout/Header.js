@@ -7,7 +7,8 @@ import * as actions from "../../store/actions"
 class Header extends Component {
     render() {
         console.log('ROUTES')
-        const routes = this.props.routes
+        const routes = this.props.routes ? this.props.routes : null 
+        const socials = this.props.socials ? this.props.socials : null 
         routes.pop()
         console.log(routes)
 
@@ -17,20 +18,29 @@ class Header extends Component {
             )
         })
 
+        const links_socials = socials.map((li, index)=> {
+            return (
+                <li key={index}>
+                    <a href={li.url} target="_blank" rel='noopener noreferrer' ><i className={"fa fa-" + li.icon}></i></a>
+                </li>
+            )
+        })
+
         return (
             <div id="nav_bar">
                 <NavLink className="logo" to={"/home"}>
-                    <img src={photo} alt="Front-end Developer Logo, Web Developer Logo , Front End Developer Logo" />
+                    <span>{this.props.initials}</span>
+                    {/* <img src={photo} alt="Front-end Developer Logo, Web Developer Logo , Front End Developer Logo" /> */}
                 </NavLink>
                 <nav className="en">
                 {
                     links
                 }
                 </nav>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/aydeequispe" target="_blank" rel='noopener noreferrer' ><i className="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/AydeeQM" target="_blank" rel='noopener noreferrer' ><i className="fa fa-github"></i></a></li>
-                    <li><a href="https://www.facebook.com/QM.AyDee" target="_blank" rel='noopener noreferrer' ><i className="fa fa-facebook"></i></a></li>
+                <ul className='socials'>
+                {
+                    links_socials
+                }
                 </ul>
                 <a id="mobile-link" onClick={() => this.props.isHidden()}><i className="fa fa-bars"></i></a>
                 {this.props.showing &&
@@ -49,7 +59,8 @@ class Header extends Component {
 const mapStateToProps = state => {
     return {
         showing: state.general.showing,
-        isHide: state.general.isHide
+        isHide: state.general.isHide,
+        initials: state.general.portada.initials,
     }
 }
 

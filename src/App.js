@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import { Switch, Redirect, Route, withRouter } from 'react-router-dom'
 
 import appRoutes from './routes/index'
-import './assets/css/body.css';
+import './assets/scss/body.scss'
+import '../node_modules/font-awesome/css/font-awesome.min.css'
+import '../node_modules/hover.css/css/hover-min.css'
+
 class App extends Component {
 
     componentDidMount() {
