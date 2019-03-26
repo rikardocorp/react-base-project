@@ -49,6 +49,7 @@
     "react-notifications-component": "^1.0.1",
     "react-redux": "^6.0.1",
     "react-router-dom": "^5.0.0",
+    "react-scroll": "^1.7.11",
     "react-sticky": "^6.0.3",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 // import TextZone from '../../components/TextZone'
 import Divisor from '../../components/Divisor'
 import Profile from '../../containers/Profile/Profile'
@@ -45,13 +47,19 @@ class About extends Component {
                         </div>
 
                         <div className="col-7 col-md-7 col-xl-8">
-                            <Summary summary={_summary} keywords={_keywords} />
+                            <Element name="summary">
+                                <Summary summary={_summary} keywords={_keywords} />
+                            </Element>
                             <Divisor count={2}></Divisor>
                             <Expertise data={expertise}></Expertise>
                             <br /><br /><br />
-                            <Education data={education}></Education>
+                            <Element name="education">
+                                <Education data={education}></Education>
+                            </Element>
                             <Divisor count={3}></Divisor>
-                            <Experience data={experience}></Experience>
+                            <Element name="experience">
+                                <Experience data={experience}></Experience>
+                            </Element>
                         </div>
                     </div>
                     {/* <span className="tags bottom-tags"> &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br></br> &lt;/html&gt; </span> */}

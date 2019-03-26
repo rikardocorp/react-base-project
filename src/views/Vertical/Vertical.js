@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import ReactNotification from 'react-notifications-component'
 
 import {route as myRoutes} from './route'
-import Header from '../../components/Layout/Header';
+import Header from '../../components/Layout/HeaderScroll';
 class Vertical extends Component {
 
     constructor(props) {
@@ -43,6 +43,7 @@ class Vertical extends Component {
         let contentSwitch = null
         if (allRoutes) {
             contentSwitch = allRoutes.map((localRoute, key) => {
+                if (localRoute.component == null) return null;
                 const {requiredAuth=undefined, roles=undefined} = localRoute.meta ? localRoute.meta : {}
                 if (this.props.location.pathname === localRoute.path) {
                     localClassName = localRoute.className
