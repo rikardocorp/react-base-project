@@ -5,7 +5,7 @@ const ItemEducation = (props) => {
     const {years='', title=null, where=null, thesis_title=null, advisor=null, detail=null} = props.data
 
     return (
-        <div className='education row mt-4'>
+        <div className='list-item row mt-4'>
             <div className="col col-md-12 col-xl-3">
                 <span>{years}</span>
             </div>

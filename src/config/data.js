@@ -12,7 +12,7 @@ export const data = {
     },
     about_me: {
         fullname: 'Ricardo Coronado',
-        title: 'PhD. in Computer Science',
+        title: 'MSc. in Computer Science',
         address: 'Barranco, Lima, Peru',
         languages: 'English, Spanish',
         photo: 'https://www.dropbox.com/s/t3vknogssrg1qa2/profile.jpeg',
@@ -111,7 +111,49 @@ export const data = {
                 'Firestore',
                 'NodeJs'
             ],
-            url: 'laboratoria.la'
+            url: 'http://laboratoria.la'
+        },
+        {
+            from_to: '07/17–-03/18',
+            position: 'Senior Software Engineer',
+            job_description: 'Laboratoria, Talent that Transforms, Lima, Perú, A non-profit organization where I was blessed to work with. I was a mentor, teacher in thebootcamp program and Senior Developer. I helped to build the talent and e-learningplatform.',
+            where: 'Lima, Peru',
+            technologies: [
+                'React',
+                'Redux',
+                'Firebase',
+                'Firestore',
+                'NodeJs'
+            ],
+            url: 'http://laboratoria.la'
+        },
+        {
+            from_to: '07/17–-03/18',
+            position: 'Senior Software Engineer',
+            job_description: 'Laboratoria, Talent that Transforms, Lima, Perú, A non-profit organization where I was blessed to work with. I was a mentor, teacher in thebootcamp program and Senior Developer. I helped to build the talent and e-learningplatform.',
+            where: 'Lima, Peru',
+            technologies: [
+                'React',
+                'Redux',
+                'Firebase',
+                'Firestore',
+                'NodeJs'
+            ],
+            url: 'http://laboratoria.la'
+        },
+        {
+            from_to: '07/17–-03/18',
+            position: 'Senior Software Engineer',
+            job_description: 'Laboratoria, Talent that Transforms, Lima, Perú, A non-profit organization where I was blessed to work with. I was a mentor, teacher in thebootcamp program and Senior Developer. I helped to build the talent and e-learningplatform.',
+            where: 'Lima, Peru',
+            technologies: [
+                'React',
+                'Redux',
+                'Firebase',
+                'Firestore',
+                'NodeJs'
+            ],
+            url: 'http://laboratoria.la'
         }
     ]
 }

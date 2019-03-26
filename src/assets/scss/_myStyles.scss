@@ -58,11 +58,11 @@ body {
                 padding-top: 10px;
             }
 
-            .educations{
+            .list-type-2{
                 font-size: 1.5em;
                 font-family: terminus;
                 letter-spacing: .5px;
-                .education{
+                .list-item{
                     // padding: 20px;
                     // border: 1px solid #bdbdbd;
                     // border-radius: 1em;
@@ -84,6 +84,16 @@ body {
                     }
                     .location{
 
+                    }
+                }
+                .list-badges{
+                    .badge{
+                        padding: 3px 5px;
+                        font-size: 0.8em;
+                        color: white;
+                        font-weight: normal;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
                     }
                 }
             }
